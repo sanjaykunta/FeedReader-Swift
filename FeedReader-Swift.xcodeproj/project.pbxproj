@@ -12,6 +12,9 @@
 		5C80041E196F6CA900897F1B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5C80041C196F6CA900897F1B /* Main.storyboard */; };
 		5C800420196F6CA900897F1B /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5C80041F196F6CA900897F1B /* Images.xcassets */; };
 		5C80042C196F6CA900897F1B /* FeedReader_SwiftTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C80042B196F6CA900897F1B /* FeedReader_SwiftTests.swift */; };
+		5C93B659196FCA8700A4A1CC /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C93B658196FCA8700A4A1CC /* DetailViewController.swift */; };
+		5CF4ACC6196F838C0014A001 /* FeedItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CF4ACC5196F838C0014A001 /* FeedItem.swift */; };
+		B186A8B9C16549199AED64C6 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = AF0E578F4F794009A7F4BEA8 /* libPods.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -25,6 +28,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1399C7DA2C1D456091AF36AF /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
 		5C800413196F6CA900897F1B /* FeedReader-Swift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "FeedReader-Swift.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5C800417196F6CA900897F1B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5C800418196F6CA900897F1B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -34,6 +38,10 @@
 		5C800425196F6CA900897F1B /* FeedReader-SwiftTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "FeedReader-SwiftTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5C80042A196F6CA900897F1B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5C80042B196F6CA900897F1B /* FeedReader_SwiftTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedReader_SwiftTests.swift; sourceTree = "<group>"; };
+		5C93B658196FCA8700A4A1CC /* DetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		5CF4ACC4196F74590014A001 /* bridge.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = bridge.h; sourceTree = "<group>"; };
+		5CF4ACC5196F838C0014A001 /* FeedItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedItem.swift; sourceTree = "<group>"; };
+		AF0E578F4F794009A7F4BEA8 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -41,6 +49,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B186A8B9C16549199AED64C6 /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -54,12 +63,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		13B64CE8B63B41E29D5962EC /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				AF0E578F4F794009A7F4BEA8 /* libPods.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		5C80040A196F6CA900897F1B = {
 			isa = PBXGroup;
 			children = (
+				5CF4ACC4196F74590014A001 /* bridge.h */,
 				5C800415196F6CA900897F1B /* FeedReader-Swift */,
 				5C800428196F6CA900897F1B /* FeedReader-SwiftTests */,
 				5C800414196F6CA900897F1B /* Products */,
+				1399C7DA2C1D456091AF36AF /* Pods.xcconfig */,
+				13B64CE8B63B41E29D5962EC /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -78,6 +98,8 @@
 				5C800418196F6CA900897F1B /* AppDelegate.swift */,
 				5C80041A196F6CA900897F1B /* ViewController.swift */,
 				5C80041C196F6CA900897F1B /* Main.storyboard */,
+				5CF4ACC5196F838C0014A001 /* FeedItem.swift */,
+				5C93B658196FCA8700A4A1CC /* DetailViewController.swift */,
 				5C80041F196F6CA900897F1B /* Images.xcassets */,
 				5C800416196F6CA900897F1B /* Supporting Files */,
 			);
@@ -116,9 +138,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 5C80042F196F6CA900897F1B /* Build configuration list for PBXNativeTarget "FeedReader-Swift" */;
 			buildPhases = (
+				18AD45D66FA644D782B6F04F /* Check Pods Manifest.lock */,
 				5C80040F196F6CA900897F1B /* Sources */,
 				5C800410196F6CA900897F1B /* Frameworks */,
 				5C800411196F6CA900897F1B /* Resources */,
+				352579EABDFE49BF8A6BE60A /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -203,6 +227,39 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		18AD45D66FA644D782B6F04F /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		352579EABDFE49BF8A6BE60A /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		5C80040F196F6CA900897F1B /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -210,6 +267,8 @@
 			files = (
 				5C80041B196F6CA900897F1B /* ViewController.swift in Sources */,
 				5C800419196F6CA900897F1B /* AppDelegate.swift in Sources */,
+				5CF4ACC6196F838C0014A001 /* FeedItem.swift in Sources */,
+				5C93B659196FCA8700A4A1CC /* DetailViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -322,23 +381,31 @@
 		};
 		5C800430196F6CA900897F1B /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1399C7DA2C1D456091AF36AF /* Pods.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CLANG_ENABLE_MODULES = YES;
+				DEFINES_MODULE = YES;
 				INFOPLIST_FILE = "FeedReader-Swift/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = bridge.h;
 			};
 			name = Debug;
 		};
 		5C800431196F6CA900897F1B /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1399C7DA2C1D456091AF36AF /* Pods.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CLANG_ENABLE_MODULES = YES;
+				DEFINES_MODULE = YES;
 				INFOPLIST_FILE = "FeedReader-Swift/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = bridge.h;
 			};
 			name = Release;
 		};
@@ -395,6 +462,7 @@
 				5C800431196F6CA900897F1B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		5C800432196F6CA900897F1B /* Build configuration list for PBXNativeTarget "FeedReader-SwiftTests" */ = {
 			isa = XCConfigurationList;
@@ -403,6 +471,7 @@
 				5C800434196F6CA900897F1B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

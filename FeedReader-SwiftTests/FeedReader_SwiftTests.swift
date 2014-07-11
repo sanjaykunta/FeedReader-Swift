@@ -2,7 +2,7 @@
 //  FeedReader_SwiftTests.swift
 //  FeedReader-SwiftTests
 //
-//  Created by Sampath Kumar Kunta on 7/10/14.
+//  Created by Sanjay Kumar Kunta on 7/10/14.
 //  Copyright (c) 2014 Kent State University. All rights reserved.
 //
 
